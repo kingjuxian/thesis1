@@ -73,6 +73,7 @@ h1 {
 }
 
 p {
+    margin-right: 15%;
     color: #fff;
     font-size: 16px;
     line-height: 20px;
@@ -93,15 +94,15 @@ p {
 }
 
 .card1 {
-    background-image: url(deped.jpeg);
+    background-image: url(module1.jpg);
 }
 
 .card3 {
-    background-image: url(tesda.jpeg);
+    background-image: url(module3.jpg);
 }
 
 .card4 {
-    background-image: url(ched.jpeg);
+    background-image: url(module2.jpg);
 }
 
 .card:hover {

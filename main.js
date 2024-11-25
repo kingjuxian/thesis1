@@ -1,29 +1,25 @@
-var swiper = new Swiper(".slider-content", {
-    slidesPerView: 3,
-    spaceBetween: 25,
-    loop: true,
-    centerSlide:'true',
-    fade:'true',
-    grabCursor:'true',
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets:true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints:{
-        0:{
-            slidesPerView:1,
-        },
-        520:{
-            slidesPerView:2,
-        },
-        950:{
-            slidesPerView:3,
-        },
-    }
-  });
+const showMenu = (headerToggle, navbarId) =>{
+    const toggleBtn = document.getElementById(headerToggle),
+    nav = document.getElementById(navbarId)
+    
 
+    if(headerToggle && navbarId){
+        toggleBtn.addEventListener('click', ()=>{
+
+            nav.classList.toggle('show-menu')
+
+            toggleBtn.classList.toggle('bx-x')
+        })
+    }
+}
+showMenu('header-toggle','navbar')
+
+
+const linkColor = document.querySelectorAll('.nav__link')
+
+function colorLink(){
+    linkColor.forEach(l => l.classList.remove('active'))
+    this.classList.add('active')
+}
+
+linkColor.forEach(l => l.addEventListener('click', colorLink))
